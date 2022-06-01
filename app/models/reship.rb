@@ -1,0 +1,2 @@
+class Reship < ApplicationRecord
+end
