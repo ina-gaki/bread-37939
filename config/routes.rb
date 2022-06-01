@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  get 'records/index'
-  root to: "records#index"
+  get 'tools/index'
+  root to: "tools#index"
+  resources :tools, only: [:index, :new]
 end

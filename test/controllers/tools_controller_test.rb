@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class RecordsControllerTest < ActionDispatch::IntegrationTest
+class ToolsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get records_index_url
+    get tools_index_url
     assert_response :success
   end
 

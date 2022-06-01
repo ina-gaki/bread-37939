@@ -8,7 +8,7 @@
   <body>
     <div><%= image_tag 'bread.jpg' ,class:'bread-image'%></div>
     <ul class='lists'>
-      <li><%= link_to '計算ツール', "#", class: "tool" %></li>
+      <li><%= link_to '計算ツール', new_tool_path, class: "tool" %></li>
       <li><%= link_to '記録一覧', "#", class: "record" %></li>
       <li><%= link_to '新規登録', "#", class: "sign-up" %></li>
       <li><%= link_to 'ログイン', "#", class: "rogin" %></li>
@@ -16,3 +16,5 @@
     </ul>
   </body>
 </html>
+
+
