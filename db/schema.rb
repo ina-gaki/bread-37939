@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_01_035503) do
+ActiveRecord::Schema.define(version: 2022_06_02_035129) do
+
+  create_table "reship2s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "flour2"
+    t.integer "water2"
+    t.integer "salt2"
+    t.integer "sugar2"
+    t.integer "yeast2"
+    t.integer "oil2"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "reships", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "flour"
