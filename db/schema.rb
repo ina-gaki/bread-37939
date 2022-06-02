@@ -13,7 +13,9 @@
 ActiveRecord::Schema.define(version: 2022_06_02_035129) do
 
   create_table "reship2s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "flour2"
+    t.integer "flour_g"
+    t.integer "flour2_1"
+    t.integer "flour2_2"
     t.integer "water2"
     t.integer "salt2"
     t.integer "sugar2"

@@ -4,7 +4,9 @@ class ToolsController < ApplicationController
 
   def create
     reship = Reship.create(reship_params)
-    render json:{ reship: reship }
+
+    reship2 = Reship2.create(reship2_params)
+    render json:{reship: reship , reship2: reship2 }
   end
 
 
@@ -14,4 +16,7 @@ class ToolsController < ApplicationController
     params.permit(:flour,:water,:salt,:sugar,:yeast,:oil)
   end
 
+  def reship2_params
+    params.permit(:flour2,:water2,:salt2,:sugar2,:yeast2,:oil2)
+  end
 end
