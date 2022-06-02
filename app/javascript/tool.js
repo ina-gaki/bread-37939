@@ -41,7 +41,7 @@ function post (){
 
           </div>
         </div>`;
-      list.insertAdjacentHTML("afterend", html);
+      list.innerHTML = html;
     };
   });
 };
