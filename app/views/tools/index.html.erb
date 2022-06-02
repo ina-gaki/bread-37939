@@ -1,6 +1,6 @@
 <div class="contents row">
-  <div class="container">
-    <h3>投稿する</h3>
+  <div class="gram_to_bakers">
+    <h3>グラム表記 ⇨ ベーカーズ％</h3>
     <%= form_with(model: @reship,url: tools_path, local: true,id: "form") do |form| %>
       <%= form.text_field :flour, placeholder: "小麦粉(g)" ,id: "flour"%>
       <%= form.text_field :water, placeholder: "水(g)" ,id: "water"%>
