@@ -13,5 +13,19 @@
   </div>
   <div id="list">
   </div>
+    <div class="bakers_to_gram">
+    <h3>ベーカーズ％ ⇨ グラム表記</h3>
+    <%= form_with(model: @reship2,url: tools_path, local: true,id: "form2") do |form| %>
+      <%= form.text_field :flour, placeholder: "小麦粉(%)" ,id: "flour2"%>
+      <%= form.text_field :water, placeholder: "水(%)" ,id: "water2"%>
+      <%= form.text_field :salt, placeholder: "塩(%)" ,id: "salt2" %>
+      <%= form.text_field :sugar, placeholder: "砂糖(%)" ,id: "sugar2"%>
+      <%= form.text_field :yeast, placeholder: "イースト(%)" ,id: "yeast2"%>
+      <%= form.text_field :oil, placeholder: "油脂(%)" ,id: "oil2"%>
+      <%= form.submit "変換", id: "submit" %>
+    <% end %>
+  </div>
+  <div id="list2">
+  </div>
 
 </div>
