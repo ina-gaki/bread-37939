@@ -81,6 +81,12 @@ function post (){
     XHR.onload = () => {
       const list = document.getElementById("list");
       list.innerHTML = buildHTML(XHR);
+      flour.value = "";
+      water.value = "";
+      salt.value = "";
+      sugar.value = "";
+      oil.value = "";
+      yeast.value = "";
     };
   });
 };
@@ -98,6 +104,14 @@ function post2 (){
     XHR.onload = () => {
       const list = document.getElementById("list2");
       list.innerHTML = buildHTML2(XHR);
+      flour2_1.value = "";
+      flour2_2.value = "";
+      flour_g.value = "";
+      water2.value = "";
+      salt2.value = "";
+      sugar2.value = "";
+      oil2.value = "";
+      yeast2.value = "";
     };
   });
 };
