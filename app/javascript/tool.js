@@ -52,7 +52,11 @@ const buildHTML2 = (XHR) => {
   num_flour2_2 = parseInt(flour2_2.value);
 
   if (num_flour2_1 + num_flour2_2 != 100) {
-    console.log('実行された')
+    const html = `
+    <div class="caution">
+      小麦粉1と小麦粉2の合計が100%になるようにしてください
+    </div>`;
+    return html;
   }
 
   const gram_flour = flour_g.value / (num_flour2_1 + num_flour2_2);
@@ -71,8 +75,8 @@ const buildHTML2 = (XHR) => {
     小麦粉:${flour_g.value}g
     </div>
       <div class="bakers-calculation">
-        小麦粉1:${flour2_1.value}%
-        小麦粉2:${flour2_2.value}%
+        小麦粉①:${flour2_1.value}%
+        小麦粉②:${flour2_2.value}%
         水:${water2.value}%
         塩:${salt2.value}%
         砂糖:${sugar2.value}%
@@ -83,8 +87,8 @@ const buildHTML2 = (XHR) => {
         ↓
       </div>
       <div class="bakers-calculation">
-        小麦粉1:${gram_flour_1.toFixed(0)}g
-        小麦粉2:${gram_flour_2.toFixed(0)}g
+        小麦粉①:${gram_flour_1.toFixed(0)}g
+        小麦粉②:${gram_flour_2.toFixed(0)}g
         水:${gram_water.toFixed(0)}g
         塩:${gram_salt.toFixed(0)}g
         砂糖:${gram_sugar.toFixed(0)}g

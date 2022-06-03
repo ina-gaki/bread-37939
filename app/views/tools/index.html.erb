@@ -17,8 +17,8 @@
     <h3>ベーカーズ％ ⇨ グラム表記</h3>
     <%= form_with(model: @reship2,url: tools_path, local: true,id: "form2") do |form| %>
       <%= form.text_field :flour_g, placeholder: "小麦粉(g)" ,id: "flour_g"%>
-      <%= form.text_field :flour2_1, placeholder: "小麦粉(%)" ,id: "flour2_1"%>
-      <%= form.text_field :flour2_2, placeholder: "小麦粉(%)" ,id: "flour2_2"%>
+      <%= form.text_field :flour2_1, placeholder: "小麦粉①(%)" ,id: "flour2_1"%>
+      <%= form.text_field :flour2_2, placeholder: "小麦粉②(%)" ,id: "flour2_2"%>
       <%= form.text_field :water2, placeholder: "水(%)" ,id: "water2"%>
       <%= form.text_field :salt2, placeholder: "塩(%)" ,id: "salt2" %>
       <%= form.text_field :sugar2, placeholder: "砂糖(%)" ,id: "sugar2"%>
