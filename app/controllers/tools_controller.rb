@@ -3,8 +3,8 @@ class ToolsController < ApplicationController
   end
 
   def create
-      reship = Reship.create(reship_params)
-      reship2 = Reship2.create(reship2_params)
+    reship = Reship.create(reship_params)
+    reship2 = Reship2.create(reship2_params)
     render json:{reship: reship , reship2: reship2 }
   end
 
