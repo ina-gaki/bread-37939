@@ -14,18 +14,25 @@ const buildHTML = (XHR) => {
 
   const item = XHR.response.reship;
   const html = `
-    <div class="post">
-      <div class="post-date">
-        小麦粉：${item.flour}g
+    <div class="gram">
+      <div class="gram-calculation">
+        小麦粉：${flour.value}g
+        水:${water.value}g
+        塩:${salt.value}g
+        砂糖:${sugar.value}g
+        イースト:${yeast.value}g
+        油脂:${oil.value}g
       </div>
-      <div class="post-content">
+      <div class="result">
+        ↓
+      </div>
+      <div class="gram-calculation">
         小麦粉:100%
         水:${bakers_water.toFixed(0)}%
         塩:${bakers_salt.toFixed(0)}%
         砂糖:${bakers_sugar.toFixed(0)}%
         イースト:${bakers_yeast.toFixed(0)}%
         油脂:${bakers_oil.toFixed(0)}%
-
       </div>
     </div>`;
   return html;
@@ -41,10 +48,16 @@ const buildHTML2 = (XHR) => {
   const oil2 = document.getElementById("oil2");
   const yeast2 = document.getElementById("yeast2");
 
-  num1 = parseInt(flour2_1.value);
-  num2 = parseInt(flour2_2.value);
+  num_flour2_1 = parseInt(flour2_1.value);
+  num_flour2_2 = parseInt(flour2_2.value);
 
-  const gram_flour = flour_g.value / (num1 + num2);
+  if (num_flour2_1 + num_flour2_2 != 100) {
+    console.log('実行された')
+  }
+
+  const gram_flour = flour_g.value / (num_flour2_1 + num_flour2_2);
+  const gram_flour_1 = gram_flour  * num_flour2_1;
+  const gram_flour_2 = gram_flour  * num_flour2_2;
   const gram_water = gram_flour  * (water2.value);
   const gram_salt = gram_flour * (salt2.value);
   const gram_sugar = gram_flour * (sugar2.value);
@@ -53,11 +66,25 @@ const buildHTML2 = (XHR) => {
 
   const item = XHR.response.reship2;
   const html = `
-    <div class="post">
-    <div class="post-date">
+    <div class="bakers">
+    <div class="bakers-gram">
     小麦粉:${flour_g.value}g
     </div>
-      <div class="post-content">
+      <div class="bakers-calculation">
+        小麦粉1:${flour2_1.value}%
+        小麦粉2:${flour2_2.value}%
+        水:${water2.value}%
+        塩:${salt2.value}%
+        砂糖:${sugar2.value}%
+        イースト:${yeast2.value}%
+        油脂:${oil2.value}%
+      </div>
+      <div class="result">
+        ↓
+      </div>
+      <div class="bakers-calculation">
+        小麦粉1:${gram_flour_1.toFixed(0)}g
+        小麦粉2:${gram_flour_2.toFixed(0)}g
         水:${gram_water.toFixed(0)}g
         塩:${gram_salt.toFixed(0)}g
         砂糖:${gram_sugar.toFixed(0)}g
