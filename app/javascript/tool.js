@@ -48,10 +48,8 @@ const buildHTML2 = (XHR) => {
   const oil2 = document.getElementById("oil2");
   const yeast2 = document.getElementById("yeast2");
 
-  num_flour2_1 = parseInt(flour2_1.value);
-  num_flour2_2 = parseInt(flour2_2.value);
 
-  if (num_flour2_1 + num_flour2_2 != 100) {
+  if (parseInt(flour2_1.value) + parseInt(flour2_2.value) != 100) {
     const html = `
     <div class="caution">
       小麦粉1と小麦粉2の合計が100%になるようにしてください
@@ -127,6 +125,10 @@ function post2 (){
   submit.addEventListener("click", (e) => {
     e.preventDefault();
     const form = document.getElementById("form2");
+    if (parseInt(flour2_1.value) + parseInt(flour2_2.value) != 100) {
+      //小麦粉のベーカーズ％は必ず100％でなければならない為、それ以外の時は空にすることでバリデーションに引っかかるようにしている
+      flour2_1.value = "";
+    } 
     const formData = new FormData(form);
     const XHR = new XMLHttpRequest();
     XHR.open("POST", "/tools", true);
