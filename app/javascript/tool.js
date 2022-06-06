@@ -6,6 +6,19 @@ const buildHTML = (XHR) => {
   const oil = document.getElementById("oil");
   const yeast = document.getElementById("yeast");
 
+  if ((flour.value=="") || (water.value=="") || (salt.value=="") || 
+  (sugar.value=="") || (oil.value=="") || (yeast.value=="")) {
+    const html = `
+    <div class="caution">
+      値を入力してください
+    </div>
+    <div class="caution2">
+    使わない原料には0を入力してください
+    </div>
+    `
+    return html;
+  }
+
   const bakers_water = (water.value) / (flour.value) * 100;
   const bakers_salt = (salt.value) / (flour.value) * 100;
   const bakers_sugar = (sugar.value) / (flour.value) * 100;
@@ -57,9 +70,9 @@ const buildHTML2 = (XHR) => {
     return html;
   }
 
-  const gram_flour = flour_g.value / (num_flour2_1 + num_flour2_2);
-  const gram_flour_1 = gram_flour  * num_flour2_1;
-  const gram_flour_2 = gram_flour  * num_flour2_2;
+  const gram_flour = flour_g.value / (parseInt(flour2_1.value) + parseInt(flour2_2.value));
+  const gram_flour_1 = gram_flour  * parseInt(flour2_1.value);
+  const gram_flour_2 = gram_flour  * parseInt(flour2_2.value);
   const gram_water = gram_flour  * (water2.value);
   const gram_salt = gram_flour * (salt2.value);
   const gram_sugar = gram_flour * (sugar2.value);
