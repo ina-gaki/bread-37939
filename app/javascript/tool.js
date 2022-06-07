@@ -139,7 +139,6 @@ function post2 (){
     e.preventDefault();
     const form = document.getElementById("form2");
     if (parseInt(flour2_1.value) + parseInt(flour2_2.value) != 100) {
-      //小麦粉のベーカーズ％は必ず100％でなければならない為、それ以外の時は空にすることでバリデーションに引っかかるようにしている
       flour2_1.value = "";
     } 
     const formData = new FormData(form);
