@@ -1,33 +1,47 @@
 <div class="contents row">
   <div class="gram_to_bakers">
-    <h3>グラム表記 ⇨ ベーカーズ％</h3>
+    <div class="title">
+      <h3>グラム表記 ⇨ ベーカーズ％</h3>
+    </div>
     <%= form_with(model: @reship,url: tools_path, local: true,id: "form") do |form| %>
-      <%= form.text_field :flour, placeholder: "小麦粉(g)" ,id: "flour"%>
-      <%= form.text_field :water, placeholder: "水(g)" ,id: "water"%>
-      <%= form.text_field :salt, placeholder: "塩(g)" ,id: "salt" %>
-      <%= form.text_field :sugar, placeholder: "砂糖(g)" ,id: "sugar"%>
-      <%= form.text_field :yeast, placeholder: "イースト(g)" ,id: "yeast"%>
-      <%= form.text_field :oil, placeholder: "油脂(g)" ,id: "oil"%>
-      <%= form.submit "変換", id: "submit" %>
+      <div class="form">
+        <%= form.text_field :flour, placeholder: "小麦粉(g)" ,id: "flour", class:"form_text"%>
+        <%= form.text_field :water, placeholder: "水(g)" ,id: "water", class:"form_text"%>
+        <%= form.text_field :salt, placeholder: "塩(g)" ,id: "salt" , class:"form_text"%>
+        <%= form.text_field :sugar, placeholder: "砂糖(g)" ,id: "sugar", class:"form_text"%>
+        <%= form.text_field :yeast, placeholder: "イースト(g)" ,id: "yeast", class:"form_text"%>
+        <%= form.text_field :oil, placeholder: "油脂(g)" ,id: "oil", class:"form_text"%>
+      </div>
+      <div class="button">
+        <%= form.submit "変換", id: "submit", class:"form_button" %>
+      </div>
     <% end %>
   </div>
   <div id="list">
   </div>
   <div class="bakers_to_gram">
-    <h3>ベーカーズ％ ⇨ グラム表記</h3>
+    <div class="title">
+      <h3>ベーカーズ％ ⇨ グラム表記</h3>
+    </div>
     <%= form_with(model: @reship2,url: tools_path, local: true,id: "form2") do |form| %>
-      <%= form.text_field :flour_g, placeholder: "小麦粉(g)" ,id: "flour_g"%>
-      <%= form.text_field :flour2_1, placeholder: "小麦粉①(%)" ,id: "flour2_1"%>
-      <%= form.text_field :flour2_2, placeholder: "小麦粉②(%)" ,id: "flour2_2"%>
-      <%= form.text_field :water2, placeholder: "水(%)" ,id: "water2"%>
-      <%= form.text_field :salt2, placeholder: "塩(%)" ,id: "salt2" %>
-      <%= form.text_field :sugar2, placeholder: "砂糖(%)" ,id: "sugar2"%>
-      <%= form.text_field :yeast2, placeholder: "イースト(%)" ,id: "yeast2"%>
-      <%= form.text_field :oil2, placeholder: "油脂(%)" ,id: "oil2"%>
-      <%= form.submit "変換", id: "submit2" %>
+      <div class="form2">
+        <%= form.text_field :flour_g, placeholder: "小麦粉(g)" ,id: "flour_g", class:"form_text2"%>
+        <%= form.text_field :flour2_1, placeholder: "小麦粉①(%)" ,id: "flour2_1", class:"form_text2"%>
+        <%= form.text_field :flour2_2, placeholder: "小麦粉②(%)" ,id: "flour2_2", class:"form_text2"%>
+        <%= form.text_field :water2, placeholder: "水(%)" ,id: "water2", class:"form_text2"%>
+        <%= form.text_field :salt2, placeholder: "塩(%)" ,id: "salt2" , class:"form_text2"%>
+        <%= form.text_field :sugar2, placeholder: "砂糖(%)" ,id: "sugar2", class:"form_text2"%>
+        <%= form.text_field :yeast2, placeholder: "イースト(%)" ,id: "yeast2", class:"form_text2"%>
+        <%= form.text_field :oil2, placeholder: "油脂(%)" ,id: "oil2", class:"form_text2"%>
+      </div>
+      <div class="button">
+        <%= form.submit "変換", id: "submit2", class:"form_button" %>
+      </div>
     <% end %>
   </div>
   <div id="list2">
   </div>
-
+  <div class="picture">
+   <img src="/assets/breads_color.png" alt="パンのイラスト">
+   </div>
 </div>

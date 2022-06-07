@@ -9,10 +9,10 @@ const buildHTML = (XHR) => {
   if ((flour.value=="") || (water.value=="") || (salt.value=="") || 
   (sugar.value=="") || (oil.value=="") || (yeast.value=="")) {
     const html = `
-    <div class="caution">
+    <div class="calculation">
       値を入力してください
     </div>
-    <div class="caution2">
+    <div class="calculation">
     使わない原料には0を入力してください
     </div>
     `
@@ -28,7 +28,7 @@ const buildHTML = (XHR) => {
   const item = XHR.response.reship;
   const html = `
     <div class="gram">
-      <div class="gram-calculation">
+      <div class="calculation">
         小麦粉：${flour.value}g
         水:${water.value}g
         塩:${salt.value}g
@@ -36,10 +36,10 @@ const buildHTML = (XHR) => {
         イースト:${yeast.value}g
         油脂:${oil.value}g
       </div>
-      <div class="result">
+      <div class="calculation">
         ↓
       </div>
-      <div class="gram-calculation">
+      <div class="calculation">
         小麦粉:100%
         水:${bakers_water.toFixed(0)}%
         塩:${bakers_salt.toFixed(0)}%
@@ -64,7 +64,7 @@ const buildHTML2 = (XHR) => {
 
   if (parseInt(flour2_1.value) + parseInt(flour2_2.value) != 100) {
     const html = `
-    <div class="caution">
+    <div class="calculation">
       小麦粉1と小麦粉2の合計が100%になるようにしてください
     </div>`;
     return html;
@@ -82,10 +82,10 @@ const buildHTML2 = (XHR) => {
   const item = XHR.response.reship2;
   const html = `
     <div class="bakers">
-    <div class="bakers-gram">
+    <div class="flour_value">
     小麦粉:${flour_g.value}g
     </div>
-      <div class="bakers-calculation">
+      <div class="calculation">
         小麦粉①:${flour2_1.value}%
         小麦粉②:${flour2_2.value}%
         水:${water2.value}%
@@ -94,10 +94,10 @@ const buildHTML2 = (XHR) => {
         イースト:${yeast2.value}%
         油脂:${oil2.value}%
       </div>
-      <div class="result">
+      <div class="calculation">
         ↓
       </div>
-      <div class="bakers-calculation">
+      <div class="calculation2">
         小麦粉①:${gram_flour_1.toFixed(0)}g
         小麦粉②:${gram_flour_2.toFixed(0)}g
         水:${gram_water.toFixed(0)}g
