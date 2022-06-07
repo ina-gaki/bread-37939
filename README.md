@@ -22,6 +22,10 @@ https://bread-37939.herokuapp.com/
 ## 洗い出した用件
 https://docs.google.com/spreadsheets/d/1HHkv0-jBuv8gpBtf_zparuPaEzTpooBBimy-qpddICA/edit#gid=982722306
 
+[![Image from Gyazo](https://i.gyazo.com/ec0c58787fbe0071666daffed0472f6d.png)](https://gyazo.com/ec0c58787fbe0071666daffed0472f6d)
+
+[![Image from Gyazo](https://i.gyazo.com/07b49705c009f0acf4b2eb62d72e1297.jpg)](https://gyazo.com/07b49705c009f0acf4b2eb62d72e1297)
+
 ## データベース設計
 [![Image from Gyazo](https://i.gyazo.com/a24daac309e7af16f8387be0bb650bb3.png)](https://gyazo.com/a24daac309e7af16f8387be0bb650bb3)
 
@@ -48,6 +52,9 @@ https://docs.google.com/spreadsheets/d/1HHkv0-jBuv8gpBtf_zparuPaEzTpooBBimy-qpdd
 | sugar2                 | integer    | null: false                     |
 | yeast2                 | integer    | null: false                     |
 | oil2                   | integer    | null: false                     |
+
+## 実装予定の機能
+開発環境では問題なく動くのですが、本番環境ではベーカーズ％⇨グラムの計算は最初に行った時にのみ挙動し、また連続で計算できない状態になっています。Javascriptの学習の一環で制作したものなので、学習に励み、原因が理解でき次第対処致します。
 
 ## 開発環境
 Ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
