@@ -138,7 +138,9 @@ function post2 (){
   submit.addEventListener("click", (e) => {
     e.preventDefault();
     const form = document.getElementById("form2");
-
+    if (parseInt(flour2_1.value) + parseInt(flour2_2.value) != 100) {
+      flour2_1.value = "";
+    } 
     const formData = new FormData(form);
     const XHR = new XMLHttpRequest();
     XHR.open("POST", "/tools", true);
